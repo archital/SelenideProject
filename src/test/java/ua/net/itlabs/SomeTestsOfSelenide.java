@@ -19,7 +19,8 @@ public class SomeTestsOfSelenide {
     ReentrantLock lock;
     @BeforeTest
     public  void initConfig(){
-        System.setProperty("webdriver.chrome.driver", "U:\\My bpm\\BusinessProccessManagment\\selenidefirstproject\\chromedriver.exe");
+        String path = System.getProperty("user.dir");
+        System.setProperty("webdriver.chrome.driver", path+"\\chromedriver.exe");
         //Doesn't matter chrome or Chrome as this is case insensitive.
         System.setProperty("selenide.browser", "Chrome");
     }
