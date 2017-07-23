@@ -55,10 +55,10 @@
                     <includes>
                         <include>**/*Test*.java</include>
                     </includes>
+
                 </configuration>
             </plugin>
         </plugins>
         </build>
-
 
         </project>

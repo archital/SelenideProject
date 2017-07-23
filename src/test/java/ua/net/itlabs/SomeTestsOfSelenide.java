@@ -20,7 +20,14 @@ public class SomeTestsOfSelenide {
     @BeforeTest
     public  void initConfig(){
         String path = System.getProperty("user.dir");
-        System.setProperty("webdriver.chrome.driver", path+"\\chromedriver.exe");
+        String OS = System.getProperty("os.name");
+
+        if (OS.startsWith("Windows")) {
+            System.setProperty("webdriver.chrome.driver", path + "\\chromedriver.exe");
+        }
+        else {
+            System.setProperty("webdriver.chrome.driver", path + "/chromedriver.exe");
+        }
         //Doesn't matter chrome or Chrome as this is case insensitive.
         System.setProperty("selenide.browser", "Chrome");
     }
